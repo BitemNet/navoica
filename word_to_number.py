@@ -11,3 +11,12 @@ for x in list_of_words:
     if x in w:
         s += w[x]
 print('Wartość:', s)
+
+
+# Tricki na słownikach
+dict2 = {1: '160', 2: '161', 3: 'B'}
+dict3 = {3: '160B', 4: '161B'}
+
+print(dict2, dict3)  # Output {1: '160', 2: '161', 3: 'B'} {3: '160B', 4: '161B'}
+print({*dict2, *dict3})  # Output {1, 2, 3, 4}
+print({**dict2, **dict3})  # Output {1: '160', 2: '161', 3: '160B', 4: '161B'}
